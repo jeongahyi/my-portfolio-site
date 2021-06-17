@@ -6,8 +6,13 @@ import {
     navLinks,
     navLinkItem,
     navLinkText,
-    siteTitle
+    siteTitle,
+    titleSwitchContainer,
+    switcher,
+    dark,
+    light
 } from './layout.module.css'
+import ThemeContext from '../context/ThemeContext'
 
 const Layout = ({ pageTitle, children }) => {
   const data = useStaticQuery(graphql`
@@ -19,11 +24,18 @@ const Layout = ({ pageTitle, children }) => {
         }
       }
   `)
-  console.log(data)
+
   return (
+    <ThemeContext.Consumer>
+    {theme => ( <div className={theme.dark? dark : light}>
     <main className={container}>
       <title>{pageTitle} | {data.site.siteMetadata.title}</title>
-      <p className={siteTitle}>{data.site.siteMetadata.title}</p>
+      <div className={titleSwitchContainer}>
+        <p className={siteTitle}>{data.site.siteMetadata.title}</p>
+        <button className={switcher} onClick={theme.toggleDark}>
+          {theme.dark ? <span>Light mode ☀</span> : <span>Dark mode ☾</span>}
+        </button>
+      </div>
       <nav>
         <ul className={navLinks}>
           <li className={navLinkItem}>
@@ -46,6 +58,8 @@ const Layout = ({ pageTitle, children }) => {
       <h1 className={heading}>{pageTitle}</h1>
       {children}
     </main>
+    </div> )}
+    </ThemeContext.Consumer>
   )
 }
 
