@@ -1,15 +1,15 @@
-// Step 1: Import your component
 import React from 'react'
+import Fade from 'react-reveal/Fade'
 import Layout from '../components/layout'
 
-// Step 2: Define your component
 const AboutPage = () => {
   return (
     <Layout pageTitle="About Me">
-      <p>Hi there! I'm the proud creator of this site, which I built with Gatsby :D</p>
+      <Fade bottom>
+        <p>Hi there! I'm the proud creator of this site, which I built with Gatsby :D</p>
+      </Fade>
     </Layout>
   )
 }
 
-// Step 3: Export your component
 export default AboutPage

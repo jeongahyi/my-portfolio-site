@@ -1,19 +1,27 @@
-// Step 1: Import React
 import React from 'react'
+import Fade from 'react-reveal/Fade'
 import Layout from '../components/layout'
 import { StaticImage } from 'gatsby-plugin-image'
+import '../style/main.scss';
 
-// Step 2: Define your component
 const IndexPage = () => {
   return (
     <Layout pageTitle="Landing Page">
-      <p>This is the landing page.</p>
-      <StaticImage
-        alt="This is me"
-        src="../images/austria1.jpg"
-      />
+      <Fade left duration={1000} distance="30px">
+        <h1>
+          Hi, my name is Yi
+          <br />
+          I build user experiences for products and services.
+        </h1>
+      </Fade>
+      <Fade left duration={1000} delay={500} distance="30px">
+        <StaticImage
+          alt="This is austria"
+          src="../images/austria1.jpg"
+        />
+      </Fade>
     </Layout>
   )
 }
-// Step 3: Export your component
+
 export default IndexPage

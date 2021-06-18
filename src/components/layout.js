@@ -1,17 +1,5 @@
 import * as React from 'react'
 import { Link, useStaticQuery, graphql } from 'gatsby'
-import { 
-    container,
-    heading,
-    navLinks,
-    navLinkItem,
-    navLinkText,
-    siteTitle,
-    titleSwitchContainer,
-    switcher,
-    dark,
-    light
-} from './layout.module.css'
 import ThemeContext from '../context/ThemeContext'
 
 const Layout = ({ pageTitle, children }) => {
@@ -27,35 +15,35 @@ const Layout = ({ pageTitle, children }) => {
 
   return (
     <ThemeContext.Consumer>
-    {theme => ( <div className={theme.dark? dark : light}>
-    <main className={container}>
+    {theme => ( <div className={theme.dark? "dark" : "light" }>
+    <main className="container">
       <title>{pageTitle} | {data.site.siteMetadata.title}</title>
-      <div className={titleSwitchContainer}>
-        <p className={siteTitle}>{data.site.siteMetadata.title}</p>
-        <button className={switcher} onClick={theme.toggleDark}>
+      <div className="title-switch-container">
+        <p className="site-title">{data.site.siteMetadata.title}</p>
+        <button className="switcher" onClick={theme.toggleDark}>
           {theme.dark ? <span>Light mode ☀</span> : <span>Dark mode ☾</span>}
         </button>
       </div>
       <nav>
-        <ul className={navLinks}>
-          <li className={navLinkItem}>
-            <Link to="/" className={navLinkText}>
-              Landing
+        <ul className="nav-links">
+          <li className="nav-link-item">
+            <Link to="/" className="nav-link-text">
+              Home
             </Link>
           </li>
-          <li className={navLinkItem}>
-            <Link to="/about" className={navLinkText}>
+          <li className="nav-link-item">
+            <Link to="/about" className="nav-link-text">
               About
             </Link>
           </li>
-          <li className={navLinkItem}>
-            <Link to="/work" className={navLinkText}>
+          <li className="nav-link-item">
+            <Link to="/work" className="nav-link-text">
               Work
             </Link>
           </li>
         </ul>
       </nav>
-      <h1 className={heading}>{pageTitle}</h1>
+      {/* <h1 className={heading}>{pageTitle}</h1> */}
       {children}
     </main>
     </div> )}
