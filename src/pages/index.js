@@ -2,7 +2,6 @@ import React from 'react'
 import Fade from 'react-reveal/Fade'
 import Layout from '../components/layout'
 import { StaticImage } from 'gatsby-plugin-image'
-import '../style/main.scss';
 
 const IndexPage = () => {
   return (
