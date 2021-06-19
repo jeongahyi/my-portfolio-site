@@ -15,6 +15,10 @@ module.exports = {
     ],
     "extends": [
         "eslint:recommended",
-        "plugin:react/recommended"
-    ]
+        "plugin:react/recommended",
+        "plugin:import/recommended",
+    ],
+    "ignorePatterns": [
+        "/public/render-page.js",
+    ],
 };
