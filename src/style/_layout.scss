@@ -2,6 +2,13 @@
     margin: auto;
     max-width: 800px;
     font-family: sans-serif;
+    .nav-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        flex-direction: row;
+        align-items: baseline;
+    }
 }
 
 .heading {
@@ -24,34 +31,4 @@
     font-size: 3rem;
     color: gray;
     font-weight: 700;
-}
-
-.title-switch-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    flex-direction: row;
-    align-items: baseline;
-}
-
-/* Dark mode styles */
-.switcher {
-    margin-top: 5px;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-}
-
-.dark {
-    background-color: #1f1c1c;
-    color: #fff;
-    transition: all 0.6s ease;
-    a, a:visited, span {
-        color: #fff;
-    }
-}
-
-.light {
-    background-color: #fefefe;
-    transition: all 0.6s ease;
 }
