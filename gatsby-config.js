@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: "My Portfolio Site",
+    title: "Yi Jeongah",
   },
   plugins: [
     "gatsby-plugin-gatsby-cloud",
@@ -9,10 +9,18 @@ module.exports = {
     {
       resolve: "gatsby-source-filesystem",
       options: {
-        name: `item`,
-        path: `${__dirname}/item`,
+        name: `jobs`,
+        path: `${__dirname}/content/jobs`,
       }
     },
-    "gatsby-plugin-sass"
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: `projects`,
+        path: `${__dirname}/content/projects`,
+      }
+    },
+    "gatsby-plugin-sass",
+    "gatsby-transformer-remark",
   ],
 };

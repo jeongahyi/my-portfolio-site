@@ -20,7 +20,9 @@ const Layout = ({ pageTitle, children }) => {
     <main className="container">
       <title>{pageTitle} | {data.site.siteMetadata.title}</title>
       <div className="title-switch-container">
-        <p className="site-title">{data.site.siteMetadata.title}</p>
+        <Link to="/" >
+          <p className="site-title">{data.site.siteMetadata.title}</p>
+        </Link>
         <button className="switcher" onClick={theme.toggleDark}>
           {theme.dark ? <span>Light mode ☀</span> : <span>Dark mode ☾</span>}
         </button>
@@ -28,18 +30,18 @@ const Layout = ({ pageTitle, children }) => {
       <nav>
         <ul className="nav-links">
           <li className="nav-link-item">
-            <Link to="/" className="nav-link-text">
-              Home
-            </Link>
-          </li>
-          <li className="nav-link-item">
             <Link to="/about" className="nav-link-text">
               About
             </Link>
           </li>
           <li className="nav-link-item">
-            <Link to="/work" className="nav-link-text">
-              Work
+            <Link to="/experience" className="nav-link-text">
+              Experience
+            </Link>
+          </li>
+          <li className="nav-link-item">
+            <Link to="/projects" className="nav-link-text">
+              Projects
             </Link>
           </li>
         </ul>
