@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types'
 
 const defaultState = {
     dark: false,
@@ -44,6 +45,10 @@ class ThemeProvider extends React.Component {
         </ThemeContext.Provider>
       )
   }
+}
+
+ThemeProvider.propTypes = {
+  children: PropTypes.element
 }
 
 export default ThemeContext

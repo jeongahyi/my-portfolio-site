@@ -1,4 +1,5 @@
 import * as React from 'react'
+import PropTypes from 'prop-types'
 import { Link, useStaticQuery, graphql } from 'gatsby'
 import ThemeContext from '../context/ThemeContext'
 import '../style/main.scss';
@@ -53,5 +54,10 @@ const Layout = ({ pageTitle, children }) => {
     </ThemeContext.Consumer>
   )
 }
+
+Layout.propTypes = {
+  pageTitle: PropTypes.string,
+  children: PropTypes.element,
+};
 
 export default Layout

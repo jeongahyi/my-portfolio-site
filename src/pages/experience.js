@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import Fade from 'react-reveal/Fade'
 import { graphql } from 'gatsby'
 import Layout from '../components/layout'
@@ -10,8 +11,9 @@ const ExperiencePage = ({ data }) => {
       <ul>
         {
           jobs.map(({ node }, i) => (
-            <Fade bottom duration={1000} delay={i * 500} distance="30px">
-              <li key={node.frontmatter.company}>
+            <Fade bottom duration={1000} delay={i * 500} distance="30px"
+              key={node.frontmatter.company}>
+              <li>
                 {node.frontmatter.title}
                 {node.frontmatter.type}
                 {node.frontmatter.company}
@@ -49,5 +51,9 @@ export const query = graphql`
     }
   }
 `
+
+ExperiencePage.propTypes = {
+  data: PropTypes.object,
+}
 
 export default ExperiencePage
