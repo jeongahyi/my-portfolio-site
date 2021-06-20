@@ -8,24 +8,68 @@ const ExperiencePage = ({ data }) => {
   const jobs = data.allMarkdownRemark.edges
   return (
     <Layout pageTitle="Experience">
-      <ul>
-        {
-          jobs.map(({ node }, i) => (
-            <Fade bottom duration={1000} delay={i * 500} distance="30px"
-              key={node.frontmatter.company}>
-              <li>
-                {node.frontmatter.title}
-                {node.frontmatter.type}
-                {node.frontmatter.company}
-                {node.frontmatter.location}
-                {node.frontmatter.range}
-                {node.frontmatter.url}
-                {node.frontmatter.date}
-              </li>
-            </Fade>
-          ))
-        }
-      </ul>
+      {
+        jobs.map(({ node }, i) => (
+          <div key={node.frontmatter.company}>
+            <div className="flex-wrapper">
+              <Fade 
+                bottom
+                duration={1000}
+                delay={i * 300}
+                distance="30px"
+              >
+                <h3>{node.frontmatter.title}&nbsp;</h3>
+                <a href={node.frontmatter.url}>@{node.frontmatter.company}</a>
+              </Fade>
+            </div>
+            <div className="flex-wrapper">
+              <Fade 
+                bottom
+                duration={1100}
+                delay={i * 300 + 100}
+                distance="30px"
+              >
+                <span>{node.frontmatter.range}&nbsp;</span>
+                <span>{node.frontmatter.type}</span>
+              </Fade>
+            </div>
+            <div>
+              <Fade
+                bottom
+                duration={1200}
+                delay={i * 300 + 200}
+                distance="30px"
+              >
+                <div dangerouslySetInnerHTML={{ __html: node.html }} />
+              </Fade>
+            </div>
+            <div className="flex-wrapper">
+              <Fade
+                bottom
+                duration={1200}
+                delay={i * 300 + 300}
+                distance="30px"
+              >
+                <ul>
+                  {node.frontmatter.tech.map((technology) => (
+                    <li key={technology}>{technology}</li>
+                  ))}
+                </ul>
+                <ul>
+                  {node.frontmatter.task.map((duty) => (
+                    <li key={duty}>{duty}</li>
+                  ))}
+                </ul>
+                <ul>
+                  {node.frontmatter.dispatch && node.frontmatter.dispatch.map((place) => (
+                    <li key={place}>{place}</li>
+                  ))}
+                </ul>
+              </Fade>
+            </div>
+          </div>
+        ))
+      }
     </Layout>
   )
 }
@@ -34,6 +78,7 @@ export const query = graphql`
   query {
     allMarkdownRemark(
       filter: { fileAbsolutePath: {regex: "/jobs/"} }
+      sort: { fields: frontmatter___date, order: DESC }
     ) {
       edges {
         node {
@@ -41,11 +86,13 @@ export const query = graphql`
             title
             type
             company
-            location
             range
             url
-            date
+            task
+            tech
+            dispatch
           }
+          html
         }
       }
     }
