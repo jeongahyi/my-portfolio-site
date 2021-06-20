@@ -3,29 +3,61 @@ import PropTypes from 'prop-types'
 import Fade from 'react-reveal/Fade'
 import { graphql } from 'gatsby'
 import Layout from '../components/layout'
+import { StaticImage } from 'gatsby-plugin-image'
 
 const ProjectsPage = ({ data }) => {
   const projects = data.allMarkdownRemark.edges
   return (
     <Layout pageTitle="Projects">
-      <ul>
+      <div>
         {
           projects.map(({ node }, i) => (
-            <Fade bottom duration={1000} delay={i * 500} distance="30px" 
-              key={node.frontmatter.title}>
-              <li>
-                {node.frontmatter.title}
-                {node.frontmatter.tech}
-                {node.frontmatter.company}
-                {node.frontmatter.github}
-                {node.frontmatter.url}
-                {node.frontmatter.date}
-                {node.excerpt}
-              </li>
-            </Fade>
+            <div 
+              className="project-wrapper"
+              key={node.frontmatter.title}
+            >
+              <div className="project-content">
+                <Fade
+                  bottom 
+                  duration={1000}
+                  delay={i * 500}
+                  distance="30px"
+                >
+                  <div>
+                    <h3>{node.frontmatter.title}</h3>
+                    <p>{node.excerpt}</p>
+                    <ul>
+                      {node.frontmatter.tech.map((value) => (
+                        <li key={value}>{value}</li>
+                      ))}
+                    </ul>
+                    <div>
+                      <a href={node.frontmatter.github}>github</a>
+                      <br />
+                      <a href={node.frontmatter.url}>website</a>
+                    </div>
+                  </div>
+                </Fade>
+              </div>
+              <div className="project-image">
+                <Fade
+                  bottom 
+                  duration={1400}
+                  delay={i * 500 + 400}
+                  distance="30px"
+                >
+                  <a href={node.frontmatter.url}>
+                    <StaticImage
+                      alt={node.frontmatter.title}
+                      src="../images/austria1.jpg"
+                    />
+                  </a>
+                </Fade>
+              </div>
+            </div>
           ))
         }
-      </ul>
+      </div>
     </Layout>    
   )
 }
