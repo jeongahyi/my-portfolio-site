@@ -1,13 +1,28 @@
 .project-wrapper {
-    display: flex;
-    flex-direction: row;
-    align-content: space-around;
-    justify-content: space-around;
-    align-items: flex-start;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    margin-bottom: 100px;
     .project-content {
-        flex: 1
+        z-index: 2;
+        grid-area: 1 / 1 / -1 / 7;
+        p {
+            position: relative;
+            z-index: 2;
+            padding: 25px;
+            background-color: #551b8b;
+            color: aquamarine;
+        }
+        ul {
+            list-style: none;
+            display: flex;
+            padding: 0;
+            li {
+                margin: 0px 20px 5px 0px;
+            }
+        }
     }
     .project-image {
-        flex: 2
+        z-index: 1;
+        grid-area: 1 / 5 / -1 / -1;
     }
 }

@@ -24,7 +24,7 @@ const ProjectsPage = ({ data }) => {
                   distance="30px"
                 >
                   <div>
-                    <h3>{node.frontmatter.title}</h3>
+                    <h1>{node.frontmatter.title}</h1>
                     <p>{node.excerpt}</p>
                     <ul>
                       {node.frontmatter.tech.map((value) => (
@@ -66,6 +66,7 @@ export const query = graphql`
   query {
     allMarkdownRemark(
       filter: { fileAbsolutePath: {regex: "/projects/"} }
+      sort: { fields: frontmatter___date, order: DESC }
     ) {
       edges {
         node {

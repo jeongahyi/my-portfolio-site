@@ -19,7 +19,7 @@ const ExperiencePage = ({ data }) => {
                 delay={i * 200}
                 distance="30px"
               >
-                <h3>{node.frontmatter.title}&nbsp;</h3>
+                <h1>{node.frontmatter.title}&nbsp;</h1>
                 <a href={node.frontmatter.url}>@{node.frontmatter.company}</a>
               </Fade>
             </div>
