@@ -2,12 +2,13 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Fade from 'react-reveal/Fade'
 import { graphql } from 'gatsby'
-import Layout from '../components/layout'
+import Layout from '../components/layout';
 
 const ExperiencePage = ({ data }) => {
   const jobs = data.allMarkdownRemark.edges
   return (
     <Layout pageTitle="Experience">
+      <div>
       {
         jobs.map(({ node }, i) => (
           <div key={node.frontmatter.company}>
@@ -15,7 +16,7 @@ const ExperiencePage = ({ data }) => {
               <Fade 
                 bottom
                 duration={1000}
-                delay={i * 300}
+                delay={i * 200}
                 distance="30px"
               >
                 <h3>{node.frontmatter.title}&nbsp;</h3>
@@ -26,7 +27,7 @@ const ExperiencePage = ({ data }) => {
               <Fade 
                 bottom
                 duration={1100}
-                delay={i * 300 + 100}
+                delay={i * 200 + 100}
                 distance="30px"
               >
                 <span>{node.frontmatter.range}&nbsp;</span>
@@ -37,7 +38,7 @@ const ExperiencePage = ({ data }) => {
               <Fade
                 bottom
                 duration={1200}
-                delay={i * 300 + 200}
+                delay={i * 200 + 200}
                 distance="30px"
               >
                 <div dangerouslySetInnerHTML={{ __html: node.html }} />
@@ -47,7 +48,7 @@ const ExperiencePage = ({ data }) => {
               <Fade
                 bottom
                 duration={1200}
-                delay={i * 300 + 300}
+                delay={i * 200 + 300}
                 distance="30px"
               >
                 <ul>
@@ -70,6 +71,7 @@ const ExperiencePage = ({ data }) => {
           </div>
         ))
       }
+      </div>
     </Layout>
   )
 }

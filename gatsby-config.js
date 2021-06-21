@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: "Yi Jeongah",
+    title: "Jeongah Y.",
+    url: "https://github.com/jeongahyi",
   },
   plugins: [
     "gatsby-plugin-gatsby-cloud",

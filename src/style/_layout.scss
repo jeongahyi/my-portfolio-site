@@ -1,6 +1,9 @@
 .container {
+    display: flex;
+    flex-direction: column;
     margin: auto;
     max-width: 800px;
+    min-height: 100vh;
     font-family: sans-serif;
     .nav-container {
         display: flex;
@@ -21,9 +24,6 @@
     padding-left: 0;
     .nav-link-item {
         padding-right: 2rem;
-        .nav-link-text {
-            color: black;
-        }
     }
 }
 
