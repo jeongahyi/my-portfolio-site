@@ -7,11 +7,14 @@ const IndexPage = () => {
   return (
     <Layout pageTitle="Landing Page">
       <Fade left duration={1000} distance="30px">
-        <h1>
+        <p className="index-title">
           Hi, my name is Yi
-          <br />
+        </p>
+      </Fade>
+      <Fade left duration={1000} delay={250} distance="30px">
+        <p className="index-title">
           I build user experiences for products and services.
-        </h1>
+        </p>
       </Fade>
       <Fade left duration={1000} delay={500} distance="30px">
         <StaticImage

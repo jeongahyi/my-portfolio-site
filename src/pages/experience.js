@@ -16,7 +16,7 @@ const ExperiencePage = ({ data }) => {
               <Fade 
                 bottom
                 duration={1000}
-                delay={i * 200}
+                delay={i * 100}
                 distance="30px"
               >
                 <h1>{node.frontmatter.title}&nbsp;</h1>
@@ -27,7 +27,7 @@ const ExperiencePage = ({ data }) => {
               <Fade 
                 bottom
                 duration={1100}
-                delay={i * 200 + 100}
+                delay={i * 100 + 100}
                 distance="30px"
               >
                 <span>{node.frontmatter.range}&nbsp;</span>
@@ -38,7 +38,7 @@ const ExperiencePage = ({ data }) => {
               <Fade
                 bottom
                 duration={1200}
-                delay={i * 200 + 200}
+                delay={i * 100 + 200}
                 distance="30px"
               >
                 <div dangerouslySetInnerHTML={{ __html: node.html }} />

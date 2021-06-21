@@ -20,7 +20,7 @@ const ProjectsPage = ({ data }) => {
                 <Fade
                   bottom 
                   duration={1000}
-                  delay={i * 500}
+                  delay={100}
                   distance="30px"
                 >
                   <div>
@@ -43,7 +43,7 @@ const ProjectsPage = ({ data }) => {
                 <Fade
                   bottom 
                   duration={1400}
-                  delay={i * 500 + 400}
+                  delay={200}
                   distance="30px"
                 >
                   <a href={node.frontmatter.url}>

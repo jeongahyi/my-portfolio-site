@@ -12,6 +12,11 @@
         flex-direction: row;
         align-items: baseline;
     }
+    main {
+        align-self: center;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
 }
 
 .heading {
@@ -24,6 +29,11 @@
     padding-left: 0;
     .nav-link-item {
         padding-right: 2rem;
+        a {
+            &:hover {
+                color: gray;
+            }
+        }
     }
 }
 
@@ -31,4 +41,8 @@
     font-size: 3rem;
     color: gray;
     font-weight: 700;
+    margin: 15px;
+    &:hover {
+        color:#551b8b;
+    }
 }
