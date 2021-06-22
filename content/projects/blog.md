@@ -5,6 +5,7 @@ tech:
   - TypeScript
   - PostCSS
   - Tailwind CSS
+  - Vercel
 company: ''
 github: 'https://github.com/jeongahyi/nextjs-blog'
 url: 'https://nextjs-blog-jeongahyi.vercel.app/'

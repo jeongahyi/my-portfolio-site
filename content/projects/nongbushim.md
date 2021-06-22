@@ -2,8 +2,8 @@
 title: 'Nongbushim'
 tech:
   - JavaScript
+  - Chart.js
   - BootStrap
-  - HTML5
 company: 'NONGBUSHIM'
 github: 'https://github.com/Kawasaki-JY/Nongbushim'
 url: 'https://www.nongbushim.com'
