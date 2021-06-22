@@ -1,8 +1,14 @@
 import React from 'react'
+import styled from 'styled-components'
 import PropTypes from 'prop-types'
 import Fade from 'react-reveal/Fade'
 import { graphql } from 'gatsby'
 import Layout from '../components/layout';
+
+const StyledDiv = styled.div`
+  display: flex;
+  align-items: center;
+`
 
 const ExperiencePage = ({ data }) => {
   const jobs = data.allMarkdownRemark.edges
@@ -12,7 +18,7 @@ const ExperiencePage = ({ data }) => {
       {
         jobs.map(({ node }, i) => (
           <div key={node.frontmatter.company}>
-            <div className="flex-wrapper">
+            <StyledDiv>
               <Fade 
                 bottom
                 duration={1000}
@@ -22,8 +28,8 @@ const ExperiencePage = ({ data }) => {
                 <h1>{node.frontmatter.title}&nbsp;</h1>
                 <a href={node.frontmatter.url}>@{node.frontmatter.company}</a>
               </Fade>
-            </div>
-            <div className="flex-wrapper">
+            </StyledDiv>
+            <StyledDiv>
               <Fade 
                 bottom
                 duration={1100}
@@ -33,7 +39,7 @@ const ExperiencePage = ({ data }) => {
                 <span>{node.frontmatter.range}&nbsp;</span>
                 <span>{node.frontmatter.type}</span>
               </Fade>
-            </div>
+            </StyledDiv>
             <div>
               <Fade
                 bottom
@@ -44,7 +50,7 @@ const ExperiencePage = ({ data }) => {
                 <div dangerouslySetInnerHTML={{ __html: node.html }} />
               </Fade>
             </div>
-            <div className="flex-wrapper">
+            <StyledDiv>
               <Fade
                 bottom
                 duration={1200}
@@ -67,7 +73,7 @@ const ExperiencePage = ({ data }) => {
                   ))}
                 </ul>
               </Fade>
-            </div>
+            </StyledDiv>
           </div>
         ))
       }

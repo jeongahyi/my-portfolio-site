@@ -1,20 +1,28 @@
 import React from 'react'
+import styled from 'styled-components'
 import Fade from 'react-reveal/Fade'
 import Layout from '../components/layout'
 import { StaticImage } from 'gatsby-plugin-image'
+
+const StyledIntro = styled.p`
+  font-size: 4em;
+  font-weight: bold;
+  color: rebeccapurple;
+  margin: 5px;
+`
 
 const IndexPage = () => {
   return (
     <Layout pageTitle="Landing Page">
       <Fade left duration={1000} distance="30px">
-        <p className="index-title">
+        <StyledIntro>
           Hi, my name is Yi
-        </p>
+        </StyledIntro>
       </Fade>
       <Fade left duration={1000} delay={250} distance="30px">
-        <p className="index-title">
+        <StyledIntro>
           I build user experiences for products and services.
-        </p>
+        </StyledIntro>
       </Fade>
       <Fade left duration={1000} delay={500} distance="30px">
         <StaticImage

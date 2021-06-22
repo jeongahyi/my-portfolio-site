@@ -1,9 +1,39 @@
 import React from 'react'
+import styled from 'styled-components'
 import PropTypes from 'prop-types'
 import Fade from 'react-reveal/Fade'
 import { graphql } from 'gatsby'
 import Layout from '../components/layout'
 import { StaticImage } from 'gatsby-plugin-image'
+
+const StyledProjects = styled.div`
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  margin-bottom: 100px;
+  .project-content {
+    z-index: 2;
+    grid-area: 1 / 1 / -1 / 7;
+    p {
+      position: relative;
+      z-index: 2;
+      padding: 25px;
+      background-color: #551b8b;
+      color: aquamarine;
+    }
+    ul {
+      list-style: none;
+      display: flex;
+      padding: 0;
+      li {
+        margin: 0px 20px 5px 0px;
+      }
+    }
+  }
+  .project-image {
+    z-index: 1;
+    grid-area: 1 / 5 / -1 / -1;
+  }
+` 
 
 const ProjectsPage = ({ data }) => {
   const projects = data.allMarkdownRemark.edges
@@ -11,11 +41,8 @@ const ProjectsPage = ({ data }) => {
     <Layout pageTitle="Projects">
       <div>
         {
-          projects.map(({ node }, i) => (
-            <div 
-              className="project-wrapper"
-              key={node.frontmatter.title}
-            >
+          projects.map(({ node }) => (
+            <StyledProjects key={node.frontmatter.title}>
               <div className="project-content">
                 <Fade
                   bottom 
@@ -54,7 +81,7 @@ const ProjectsPage = ({ data }) => {
                   </a>
                 </Fade>
               </div>
-            </div>
+            </StyledProjects>
           ))
         }
       </div>

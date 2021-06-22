@@ -1,17 +1,41 @@
 import React from 'react'
+import styled, { createGlobalStyle }  from 'styled-components'
 import PropTypes from 'prop-types'
 import Header from './header'
 import Footer from './footer'
-import '../style/main.scss'
+
+const GlobalStyle = createGlobalStyle`
+  body {
+    background: lightyellow;
+    color: gray;
+  }
+`
+
+const StyledLayout = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  max-width: 1000px;
+  min-height: 100vh;
+  font-family: sans-serif;
+  main {
+    align-self: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+`
 
 const Layout = ({ pageTitle, children }) => {
   return (
-    <div className="container">
-      <title>{pageTitle}</title>
-      <Header />
-      <main>{children}</main>
-      <Footer />
-    </div>
+    <>
+      <GlobalStyle />
+      <StyledLayout>
+        <title>{pageTitle}</title>
+        <Header />
+        <main>{children}</main>
+        <Footer />
+      </StyledLayout>
+    </>
   )
 }
 
