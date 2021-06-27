@@ -8,6 +8,7 @@ company: ''
 github: 'https://github.com/jeongahyi/jeongahyi.github.io'
 url: 'https://jeongahyi.github.io/'
 date: '2018-10-07'
+image: './portfolioV1.png'
 ---
 
 A single page website for my first portfolio, built with JavaScript and BootStrap

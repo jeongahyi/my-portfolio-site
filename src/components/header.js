@@ -60,11 +60,6 @@ const Header = () => {
             </Link>
           </li>
           <li>
-            <Link to="/experience">
-              Experience
-            </Link>
-          </li>
-          <li>
             <Link to="/projects">
               Projects
             </Link>
