@@ -7,14 +7,14 @@ const StyledHeader = styled.header`
   flex-wrap: wrap;
   justify-content: space-between;
   flex-direction: row;
-  align-items: baseline;
+  align-items: center;
   .site-title {
     font-size: 3rem;
-    color: gray;
+    color: #ffc391;
     font-weight: 700;
     margin: 15px;
     &:hover {
-        color:#551b8b;
+        color: gray;
     }
   }
 `
@@ -27,8 +27,13 @@ const StyledNav = styled.nav`
     li {
       padding-right: 2rem;
       a {
-        &:hover {
-          color: gray;
+        color: gray;
+        padding: 10px;
+        text-decoration: none;
+        border-radius: 70px;
+        &:hover,
+        &:focus {
+          color: #ffc391;
         }
       }
     }

@@ -7,7 +7,26 @@ const StyledProjects = styled.div`
   flex-wrap: wrap;
   flex-direction: row;
   .project-content {
-    width: 300px;
+    width: 290px;
+    background-color: #424242;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    h3 {
+      color: #ffc391;
+    }
+    a {
+      color: #b45f5c;
+    }
+    ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      padding: 0;
+      li {
+        margin: 0px 10px 5px 0px;
+      }
+    }
   }
 `
 

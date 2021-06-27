@@ -7,7 +7,7 @@ import { StaticImage } from 'gatsby-plugin-image'
 const StyledIntro = styled.p`
   font-size: 4em;
   font-weight: bold;
-  color: rebeccapurple;
+  color: #ffc391;
   margin: 5px;
 `
 

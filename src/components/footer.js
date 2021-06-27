@@ -11,9 +11,11 @@ const StyledFooter = styled.footer`
   position: relative;
   border-width: 0;
   border-style: solid;
-  border-color: #e5e7eb;
+  border-color: #424242;
   border-top-width: 1px;
+  color: #7e7e7e;
   a {
+    color: #ffc391;
     &:hover {
       color: gray;
     }

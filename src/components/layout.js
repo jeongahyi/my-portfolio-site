@@ -6,8 +6,8 @@ import Footer from './footer'
 
 const GlobalStyle = createGlobalStyle`
   body {
-    background: lightyellow;
-    color: gray;
+    background: #2d2d2d;
+    color: #dedede;
   }
 `
 

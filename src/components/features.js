@@ -6,6 +6,7 @@ import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 
 const Styledfeatures = styled.div`
   display: grid;
+  color: #7e7e7e;
   grid-template-columns: repeat(12, 1fr);
   margin-bottom: 100px;
   .feature-content {
@@ -15,8 +16,9 @@ const Styledfeatures = styled.div`
       position: relative;
       z-index: 2;
       padding: 25px;
-      background-color: #551b8b;
-      color: aquamarine;
+      color: #584e45;
+      background-color: #ffc391;
+      border-radius: 10px;
     }
     ul {
       list-style: none;
@@ -25,6 +27,9 @@ const Styledfeatures = styled.div`
       li {
         margin: 0px 20px 5px 0px;
       }
+    }
+    a {
+      color: #b45f5c;
     }
   }
   .feature-image {

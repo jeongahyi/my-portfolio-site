@@ -15,7 +15,7 @@ const StyledTab = styled.div`
 
 const StyledTabButton = styled.button`
   width: 300px;
-  color: gray;
+  color: #7e7e7e;
   background-color: inherit;
   padding: 22px 16px;
   border: none;
@@ -24,7 +24,8 @@ const StyledTabButton = styled.button`
   transition: 0.3s;
   &:hover,
   &:focus {
-    background-color: yellow;
+    color: #584e45;
+    background-color: #ffc391;
   }
   h3 {
     margin: 0;
