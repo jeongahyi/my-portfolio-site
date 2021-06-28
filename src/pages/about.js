@@ -9,12 +9,13 @@ const StyledAbout = styled.div`
   display: flex;
   flex-direction: row;
   padding-top: 20px;
+  padding-bottom: 100px;
+  color: ${props => props.theme.orangeColor};
   p {
     max-width: 600px;
     font-size: 1.5em;
     font-weight: 200;
   }
-  padding-bottom: 100px;
   img {
     width: 300px;
   }
