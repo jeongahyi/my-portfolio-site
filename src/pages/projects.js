@@ -12,7 +12,7 @@ const ProjectsPage = () => {
         <Features />
       </Fade>
       <Fade bottom delay={100} distance="30px">
-        <h2>Projects</h2>
+        <h2>All Projects</h2>
         <Projects />
       </Fade>
     </Layout>    

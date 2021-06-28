@@ -1,12 +1,18 @@
 import React from 'react'
 import styled from 'styled-components'
 import { graphql, useStaticQuery } from 'gatsby'
+import GithubIcon from './icons/githubIcon'
+import LinkIcon from './icons/linkIcon'
 
 const StyledProjects = styled.div`
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   .project-content {
+    display: flex;
+    align-content: space-between;
+    flex-direction: column;
+    justify-content: space-between;
     width: 290px;
     background-color: #424242;
     padding: 10px;
@@ -27,6 +33,19 @@ const StyledProjects = styled.div`
         margin: 0px 10px 5px 0px;
       }
     }
+    &:hover,
+    &:focus {
+      box-shadow: 5px 5px 20px black;
+    }
+  }
+`
+const StyledIcons = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+  a {
+    padding-right: 15px;
   }
 `
 
@@ -62,18 +81,23 @@ const Projects = () => {
             key={node.frontmatter.title}
             className="project-content"
           >
-            <h3>{node.frontmatter.title}</h3>
-            <p>{node.excerpt}</p>
-            <ul>
-              {node.frontmatter.tech.map((value) => (
-                <li key={value}>{value}</li>
-              ))}
-            </ul>
             <div>
-              <a href={node.frontmatter.github}>github</a>
-              <br />
-              <a href={node.frontmatter.url}>website</a>
+              <h3>{node.frontmatter.title}</h3>
+              <p>{node.excerpt}</p>
+              <ul>
+                {node.frontmatter.tech.map((value) => (
+                  <li key={value}>{value}</li>
+                ))}
+              </ul>
             </div>
+            <StyledIcons>
+              <a href={node.frontmatter.github}>
+                <GithubIcon />
+              </a>
+              <a href={node.frontmatter.url}>
+                <LinkIcon />
+              </a>
+            </StyledIcons>
           </div>
         ))
       }

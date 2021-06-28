@@ -3,6 +3,8 @@ import styled from 'styled-components'
 import { graphql, useStaticQuery } from 'gatsby'
 import Fade from 'react-reveal/Fade'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
+import GithubIcon from './icons/githubIcon'
+import LinkIcon from './icons/linkIcon'
 
 const Styledfeatures = styled.div`
   display: grid;
@@ -10,6 +12,10 @@ const Styledfeatures = styled.div`
   grid-template-columns: repeat(12, 1fr);
   margin-bottom: 100px;
   .feature-content {
+    display: flex;
+    align-content: space-between;
+    flex-direction: column;
+    justify-content: space-around;
     z-index: 2;
     grid-area: 1 / 1 / -1 / 7;
     p {
@@ -19,6 +25,7 @@ const Styledfeatures = styled.div`
       color: #584e45;
       background-color: #ffc391;
       border-radius: 10px;
+      box-shadow: 5px 5px 20px black;
     }
     ul {
       list-style: none;
@@ -37,6 +44,14 @@ const Styledfeatures = styled.div`
     grid-area: 1 / 5 / -1 / -1;
   }
 ` 
+const StyledIcons = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  a {
+    padding-right: 15px;
+  }
+`
 
 const features = () => {
   const data = useStaticQuery(graphql`
@@ -81,13 +96,13 @@ const features = () => {
           const image = getImage(node.frontmatter.image)
           console.log(image)
           return (<Styledfeatures key={node.frontmatter.title}>
-            <div className="feature-content">
-              <Fade
+            <Fade
                 bottom 
                 duration={1000}
                 delay={100}
                 distance="30px"
-              >
+            >
+              <div className="feature-content">
                 <div>
                   <h1>{node.frontmatter.title}</h1>
                   <p>{node.excerpt}</p>
@@ -96,14 +111,17 @@ const features = () => {
                       <li key={value}>{value}</li>
                     ))}
                   </ul>
-                  <div>
-                    <a href={node.frontmatter.github}>github</a>
-                    <br />
-                    <a href={node.frontmatter.url}>website</a>
-                  </div>
                 </div>
-              </Fade>
-            </div>
+                <StyledIcons>
+                  <a href={node.frontmatter.github}>
+                    <GithubIcon />
+                  </a>
+                  <a href={node.frontmatter.url}>
+                    <LinkIcon />
+                  </a>
+                </StyledIcons>
+              </div>
+            </Fade>
             <div className="feature-image">
               <Fade
                 bottom 
