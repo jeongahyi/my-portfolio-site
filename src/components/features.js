@@ -42,6 +42,9 @@ const Styledfeatures = styled.div`
   .feature-image {
     z-index: 1;
     grid-area: 1 / 5 / -1 / -1;
+    img {
+      border-radius: 10px;
+    }
   }
 ` 
 const StyledIcons = styled.div`
@@ -94,7 +97,6 @@ const features = () => {
       {
         features.map(({ node }) => {
           const image = getImage(node.frontmatter.image)
-          console.log(image)
           return (<Styledfeatures key={node.frontmatter.title}>
             <Fade
                 bottom 

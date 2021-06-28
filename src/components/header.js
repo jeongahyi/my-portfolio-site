@@ -8,18 +8,20 @@ const StyledHeader = styled.header`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  padding-left: 40px;
+  padding-right: 40px;
   .site-title {
-    margin: 15px;
-    font-size: 3rem;
-    font-weight: 700;
-    color: ${props => props.theme.orangeColor};
-    &:hover {
-      color: ${props => props.theme.grayColor};
+    color: ${props => props.theme.redColor};
+    p {
+      margin: 15px;
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: ${props => props.theme.orangeColor};
+      &:hover {
+        color: ${props => props.theme.grayColor};
+      }
     }
   }
-`
-
-const StyledNav = styled.nav`
   ul {
     list-style: none;
     display: flex;
@@ -30,7 +32,7 @@ const StyledNav = styled.nav`
         text-decoration: none;
         padding: 10px;
         border-radius: 70px;
-        color: ${props => props.theme.grayColor};
+        color: ${props => props.page? props.theme.orangeColor : props.theme.grayColor};
         &:hover,
         &:focus {
           color: ${props => props.theme.orangeColor};
@@ -50,27 +52,26 @@ const Header = () => {
       }
     }
   `)
+
   return (
     <StyledHeader>
-      <Link to="/" >
-        <p className="site-title">
+      <Link to="/" className="site-title">
+        <p>
           {data.site.siteMetadata.title}
         </p>
       </Link>
-      <StyledNav>
-        <ul>
-          <li>
-            <Link to="/about">
-              About
-            </Link>
-          </li>
-          <li>
-            <Link to="/projects">
-              Projects
-            </Link>
-          </li>
-        </ul>
-      </StyledNav>
+      <ul>
+        <li>
+          <Link to="/about">
+            About
+          </Link>
+        </li>
+        <li>
+          <Link to="/projects">
+            Projects
+          </Link>
+        </li>
+      </ul>
     </StyledHeader>
   )
 }

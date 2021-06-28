@@ -10,13 +10,14 @@ const StyledLayout = styled.div`
   display: flex;
   flex-direction: column;
   margin: auto;
-  max-width: 1000px;
+  max-width: 1600px;
   min-height: 100vh;
   font-family: sans-serif;
   main {
     align-self: center;
     margin-top: 50px;
     margin-bottom: 50px;
+    max-width: 1000px;
   }
 `
 
