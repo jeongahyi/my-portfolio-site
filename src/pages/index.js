@@ -5,10 +5,10 @@ import Layout from '../components/layout'
 import { StaticImage } from 'gatsby-plugin-image'
 
 const StyledIntro = styled.p`
+  margin: 5px;
   font-size: 4em;
   font-weight: bold;
-  color: #ffc391;
-  margin: 5px;
+  color: ${props => props.theme.orangeColor};
 `
 
 const IndexPage = () => {

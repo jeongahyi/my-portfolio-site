@@ -1,15 +1,10 @@
 import React from 'react'
-import styled, { createGlobalStyle }  from 'styled-components'
+import styled, { ThemeProvider } from 'styled-components'
+import GlobalStyle from '../styles/GlobalStyle'
+import theme from '../styles/theme'
 import PropTypes from 'prop-types'
 import Header from './header'
 import Footer from './footer'
-
-const GlobalStyle = createGlobalStyle`
-  body {
-    background: #2d2d2d;
-    color: #dedede;
-  }
-`
 
 const StyledLayout = styled.div`
   display: flex;
@@ -27,7 +22,7 @@ const StyledLayout = styled.div`
 
 const Layout = ({ pageTitle, children }) => {
   return (
-    <>
+    <ThemeProvider theme={theme}>
       <GlobalStyle />
       <StyledLayout>
         <title>{pageTitle}</title>
@@ -35,7 +30,7 @@ const Layout = ({ pageTitle, children }) => {
         <main>{children}</main>
         <Footer />
       </StyledLayout>
-    </>
+    </ThemeProvider>
   )
 }
 

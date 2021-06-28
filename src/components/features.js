@@ -8,24 +8,24 @@ import LinkIcon from './icons/linkIcon'
 
 const Styledfeatures = styled.div`
   display: grid;
-  color: #7e7e7e;
-  grid-template-columns: repeat(12, 1fr);
   margin-bottom: 100px;
+  color: ${props => props.theme.lightGrayColor};
+  grid-template-columns: repeat(12, 1fr);
   .feature-content {
     display: flex;
-    align-content: space-between;
     flex-direction: column;
+    align-content: space-between;
     justify-content: space-around;
     z-index: 2;
     grid-area: 1 / 1 / -1 / 7;
     p {
       position: relative;
-      z-index: 2;
       padding: 25px;
-      color: #584e45;
-      background-color: #ffc391;
       border-radius: 10px;
       box-shadow: 5px 5px 20px black;
+      z-index: 2;
+      color: ${props => props.theme.brownColor};
+      background-color: ${props => props.theme.orangeColor};
     }
     ul {
       list-style: none;
@@ -36,7 +36,7 @@ const Styledfeatures = styled.div`
       }
     }
     a {
-      color: #b45f5c;
+      color: ${props => props.theme.redColor};
     }
   }
   .feature-image {

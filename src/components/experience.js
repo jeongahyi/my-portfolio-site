@@ -15,17 +15,17 @@ const StyledTab = styled.div`
 
 const StyledTabButton = styled.button`
   width: 300px;
-  color: #7e7e7e;
-  background-color: inherit;
   padding: 22px 16px;
   border: none;
   text-align: left;
   cursor: pointer;
   transition: 0.3s;
+  color: ${props => props.theme.lightGrayColor};
+  background-color: inherit;
   &:hover,
   &:focus {
-    color: #584e45;
-    background-color: #ffc391;
+    color: ${props => props.theme.brownColor};
+    background-color: ${props => props.theme.orangeColor};
   }
   h3 {
     margin: 0;

@@ -5,35 +5,35 @@ import { Link, useStaticQuery, graphql } from 'gatsby'
 const StyledHeader = styled.header`
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
   flex-direction: row;
+  justify-content: space-between;
   align-items: center;
   .site-title {
-    font-size: 3rem;
-    color: #ffc391;
-    font-weight: 700;
     margin: 15px;
+    font-size: 3rem;
+    font-weight: 700;
+    color: ${props => props.theme.orangeColor};
     &:hover {
-        color: gray;
+      color: ${props => props.theme.grayColor};
     }
   }
 `
 
 const StyledNav = styled.nav`
   ul {
-    display: flex;
     list-style: none;
+    display: flex;
     padding-left: 0;
     li {
       padding-right: 2rem;
       a {
-        color: gray;
-        padding: 10px;
         text-decoration: none;
+        padding: 10px;
         border-radius: 70px;
+        color: ${props => props.theme.grayColor};
         &:hover,
         &:focus {
-          color: #ffc391;
+          color: ${props => props.theme.orangeColor};
         }
       }
     }

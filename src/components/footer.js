@@ -3,21 +3,21 @@ import styled from 'styled-components'
 import { useStaticQuery, graphql } from 'gatsby'
 
 const StyledFooter = styled.footer`
+  position: relative;
   display: flex;
   justify-content: center;
-  margin-top: auto;
   bottom: 0;
+  margin-top: auto;
   padding: 35px;
-  position: relative;
   border-width: 0;
-  border-style: solid;
-  border-color: #424242;
   border-top-width: 1px;
-  color: #7e7e7e;
+  border-style: solid;
+  border-color: ${props => props.theme.darkGrayColor};
+  color: ${props => props.theme.lightGrayColor};
   a {
-    color: #ffc391;
+    color: ${props => props.theme.orangeColor};
     &:hover {
-      color: gray;
+      color: ${props => props.theme.grayColor};
     }
   }
 `

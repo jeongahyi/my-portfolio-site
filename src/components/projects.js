@@ -10,19 +10,19 @@ const StyledProjects = styled.div`
   flex-direction: row;
   .project-content {
     display: flex;
-    align-content: space-between;
     flex-direction: column;
+    align-content: space-between;
     justify-content: space-between;
     width: 290px;
-    background-color: #424242;
-    padding: 10px;
     margin: 10px;
+    padding: 10px;
+    background-color: ${props => props.theme.darkGrayColor};
     border-radius: 10px;
     h3 {
-      color: #ffc391;
+      color: ${props => props.theme.orangeColor};
     }
     a {
-      color: #b45f5c;
+      color: ${props => props.theme.redColor};
     }
     ul {
       list-style: none;
