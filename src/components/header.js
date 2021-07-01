@@ -18,7 +18,7 @@ const StyledHeader = styled.header`
       font-weight: 700;
       color: ${props => props.theme.orangeColor};
       &:hover {
-        color: ${props => props.theme.grayColor};
+        color: ${props => props.theme.whiteColor};
       }
     }
   }

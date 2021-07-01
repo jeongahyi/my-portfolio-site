@@ -22,10 +22,15 @@ const Styledfeatures = styled.div`
       position: relative;
       padding: 25px;
       border-radius: 10px;
-      box-shadow: 5px 5px 20px black;
+      box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.5);
       z-index: 2;
-      color: ${props => props.theme.brownColor};
-      background-color: ${props => props.theme.orangeColor};
+      font-size: 1.3em;
+      font-weight: 200;
+      color: ${props => props.theme.orangeColor};
+      background-color: ${props => props.theme.darkGrayColor};
+    }
+    h1 {
+      color: ${props => props.theme.whiteColor};
     }
     ul {
       list-style: none;
@@ -94,17 +99,17 @@ const features = () => {
   const features = data.allMarkdownRemark.edges
   return (
     <div>
-      {
-        features.map(({ node }) => {
-          const image = getImage(node.frontmatter.image)
-          return (<Styledfeatures key={node.frontmatter.title}>
-            <Fade
+      {features.map(({ node }) => {
+        const image = getImage(node.frontmatter.image)
+        return (
+          <Styledfeatures key={node.frontmatter.title}>
+            <div className="feature-content">
+              <Fade
                 bottom 
                 duration={1000}
                 delay={100}
                 distance="30px"
-            >
-              <div className="feature-content">
+              >
                 <div>
                   <h1>{node.frontmatter.title}</h1>
                   <p>{node.excerpt}</p>
@@ -122,8 +127,8 @@ const features = () => {
                     <LinkIcon />
                   </a>
                 </StyledIcons>
-              </div>
-            </Fade>
+              </Fade>
+            </div>
             <div className="feature-image">
               <Fade
                 bottom 
@@ -139,9 +144,9 @@ const features = () => {
                 </a>
               </Fade>
             </div>
-          </Styledfeatures>)
-        })
-      }
+          </Styledfeatures>
+        )
+      })}
     </div> 
   )
 }

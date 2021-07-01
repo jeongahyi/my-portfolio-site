@@ -16,8 +16,9 @@ const StyledProjects = styled.div`
     width: 290px;
     margin: 10px;
     padding: 10px;
-    background-color: ${props => props.theme.darkGrayColor};
     border-radius: 10px;
+    box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.5);
+    background-color: ${props => props.theme.darkGrayColor};
     h3 {
       color: ${props => props.theme.orangeColor};
     }
@@ -35,7 +36,7 @@ const StyledProjects = styled.div`
     }
     &:hover,
     &:focus {
-      box-shadow: 5px 5px 20px black;
+      box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.5);
     }
   }
 `

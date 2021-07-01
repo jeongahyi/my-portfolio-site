@@ -15,9 +15,9 @@ const StyledFooter = styled.footer`
   border-color: ${props => props.theme.darkGrayColor};
   color: ${props => props.theme.lightGrayColor};
   a {
-    color: ${props => props.theme.orangeColor};
+    color: ${props => props.theme.grayColor};
     &:hover {
-      color: ${props => props.theme.grayColor};
+      color: ${props => props.theme.orangeColor};
     }
   }
 `
