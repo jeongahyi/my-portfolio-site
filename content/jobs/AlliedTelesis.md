@@ -1,5 +1,5 @@
 ---
-title: 'Front End Developer'
+title: 'Web Application Software Developer'
 type: 'Full Time'
 location: 'Tokyo, Japan'
 range: 'Nov 2018 - Sep 2020'
@@ -32,5 +32,3 @@ date: '2018-11-01'
 - Cooperate with cross-functional teams such as the marketing team, the QA team and back-end API team
 
 - Develop new features and maintain the existing code while dealing with network equipments such as routers, switches and APs and using network CLI and network API
-
-- Perfomed Migration from AngularJS to Angular5

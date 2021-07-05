@@ -15,22 +15,30 @@ const StyledTabs = styled.div`
 `
 
 const StyledTabButton = styled.button`
-  width: 300px;
-  padding: 22px 16px;
+  width: 400px;
+  padding: 15px 10px;
   border: none;
   text-align: left;
   cursor: pointer;
   transition: 0.3s;
   font-size: 1em;
   font-weight: 200;
-  color: ${props => props.theme.orangeColor};
+  color: ${props => props.theme.lightGrayColor};
   background-color: inherit;
+  border-left: 5px solid ${props => props.theme.darkGrayColor};
   &:hover,
   &:focus {
-    color: ${props => props.theme.brownColor};
-    background-color: ${props => props.theme.orangeColor};
+    color: ${props => props.theme.orangeColor};
+    background-color: ${props => props.theme.darkGrayColor};
+    border-left: 5px solid ${props => props.theme.orangeColor}
   }
   h3 {
+    margin: 0;
+  }
+  h4 {
+    margin: 0;
+  }
+  h5 {
     margin: 0;
   }
 `
@@ -91,9 +99,10 @@ const Experience = () => {
               onClick={() => setActiveTab(i)}
               id={i}
             >
-              <h3>{node.frontmatter.company}, {node.frontmatter.title}</h3>
+              <h3>{node.frontmatter.title}</h3>
+              <h4>@{node.frontmatter.company}</h4>
               <br />
-              <span>{node.frontmatter.range}, {node.frontmatter.type}</span>
+              <h5>{node.frontmatter.range}, {node.frontmatter.type}</h5>
               </StyledTabButton>
           ))}
         </Fade>
@@ -111,7 +120,7 @@ const Experience = () => {
               hidden={activeTab !== i}
             >
               <div dangerouslySetInnerHTML={{ __html: node.html }} />
-              <div>
+              {/* <div>
                 <ul>
                   {node.frontmatter.tech.map((technology) => (
                     <li key={technology}>{technology}</li>
@@ -127,7 +136,7 @@ const Experience = () => {
                     <li key={place}>{place}</li>
                   ))}
                 </ul>
-              </div>
+              </div> */}
             </StyledTabPanel>
           ))}
         </Fade>

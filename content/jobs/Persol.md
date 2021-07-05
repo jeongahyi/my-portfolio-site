@@ -5,7 +5,7 @@ location: 'Tokyo, Japan'
 range: 'May 2017 - Jul 2018'
 company: 'Persol'
 url: 'https://www.persol-group.co.jp/'
-detail: 'B2B2C E-Commerce platform, Rakuten Ichiba is the largest e-commerce site in Japan'
+detail: 'A leading staffing and recruiting company in Japan, technology-based human resources services specializing in IT'
 tech:
   - Java
   - SpringBoot

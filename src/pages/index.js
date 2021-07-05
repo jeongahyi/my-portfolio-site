@@ -31,7 +31,11 @@ const StyledIndex = styled.div`
     font-weight: 200;
   }
   .link {
-    color: ${props => props.theme.redColor};
+    color: ${props => props.theme.orangeColor};
+    &:hover,
+    &:focus {
+      color: ${props => props.theme.redColor};
+    }
   }
 `
 
@@ -56,9 +60,14 @@ const IndexPage = () => {
           <p className="sentence">
             I'm a software engineer with over 4 years of professional experience for both server-side and client-side.
             <br />
-            Currently, I'm designing and building several web applications. 
+            Currently, I'm designing and building several web applications.
+            <br />
+          </p>
+        </Fade>
+        <Fade left duration={1000} delay={450} distance="30px">
+          <p className="sentence">
             <Link to="/projects" className="link">
-              view the projects
+              View a list of my projects
             </Link>
           </p>
         </Fade>
