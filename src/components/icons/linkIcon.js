@@ -6,7 +6,6 @@ const LinkIcon = () => (
     width="30px"
     height="30px"
     fill="none"
-    stroke="#b45f5c"
     stroke-linecap="round"
     stroke-linejoin="round"
     stroke-width="2"

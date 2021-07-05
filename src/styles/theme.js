@@ -4,8 +4,10 @@ const theme = {
   grayColor: "#808080",
   lightGrayColor: "#7e7e7e",
   whiteColor: "#dedede",
+  maltaColor: "#A59784",
   brownColor: "#584e45",
   orangeColor: "#ffc391",
+  pinkColor: "#fe8784",
   redColor: "#b45f5c",
 }
 

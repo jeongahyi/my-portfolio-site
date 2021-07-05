@@ -28,9 +28,17 @@ const Styledfeatures = styled.div`
       font-weight: 200;
       color: ${props => props.theme.orangeColor};
       background-color: ${props => props.theme.darkGrayColor};
+      &:focus,
+      &:hover {
+        transform: scale(1.01);
+      }
     }
     h1 {
       color: ${props => props.theme.whiteColor};
+      &:focus,
+      &:hover {
+        color: ${props => props.theme.orangeColor};
+      }
     }
     ul {
       list-style: none;
@@ -38,6 +46,10 @@ const Styledfeatures = styled.div`
       padding: 0;
       li {
         margin: 0px 20px 5px 0px;
+        &:focus,
+        &:hover {
+          color: ${props => props.theme.orangeColor};
+        }
       }
     }
     a {
@@ -58,6 +70,13 @@ const StyledIcons = styled.div`
   align-items: center;
   a {
     padding-right: 15px;
+    fill: ${props => props.theme.redColor};
+    stroke: ${props => props.theme.redColor};
+    &:focus,
+    &:hover {
+      fill: ${props => props.theme.pinkColor};
+      stroke: ${props => props.theme.pinkColor};
+    }
   }
 `
 
@@ -120,10 +139,10 @@ const features = () => {
                   </ul>
                 </div>
                 <StyledIcons>
-                  <a href={node.frontmatter.github}>
+                  <a href={node.frontmatter.github} target="_blank" rel="noreferrer">
                     <GithubIcon />
                   </a>
-                  <a href={node.frontmatter.url}>
+                  <a href={node.frontmatter.url} target="_blank" rel="noreferrer">
                     <LinkIcon />
                   </a>
                 </StyledIcons>

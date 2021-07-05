@@ -13,8 +13,8 @@ const StyledProjects = styled.div`
     flex-direction: column;
     align-content: space-between;
     justify-content: space-between;
-    width: 290px;
-    margin: 10px;
+    width: 280px;
+    margin: 15px;
     padding: 10px;
     border-radius: 10px;
     box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.5);
@@ -30,13 +30,18 @@ const StyledProjects = styled.div`
       display: flex;
       flex-wrap: wrap;
       padding: 0;
+      color: ${props => props.theme.lightGrayColor};
       li {
         margin: 0px 10px 5px 0px;
+        &:focus,
+        &:hover {
+          color: ${props => props.theme.orangeColor};
+        }
       }
     }
     &:hover,
     &:focus {
-      box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.5);
+      transform: scale(1.01);
     }
   }
 `
@@ -47,6 +52,13 @@ const StyledIcons = styled.div`
   align-items: center;
   a {
     padding-right: 15px;
+    fill: ${props => props.theme.redColor};
+    stroke: ${props => props.theme.redColor};
+    &:focus,
+    &:hover {
+      fill: ${props => props.theme.pinkColor};
+      stroke: ${props => props.theme.pinkColor};
+    }
   }
 `
 
