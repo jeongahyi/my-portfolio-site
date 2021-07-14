@@ -8,6 +8,7 @@ const StyledProjects = styled.div`
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
+  place-content: center;
   .project-content {
     display: flex;
     flex-direction: column;

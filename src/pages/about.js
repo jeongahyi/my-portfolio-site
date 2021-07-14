@@ -11,6 +11,9 @@ const StyledAbout = styled.div`
   padding-top: 20px;
   padding-bottom: 100px;
   color: ${props => props.theme.orangeColor};
+  @media (max-width: 768px) {
+    display: contents;
+  }
   p {
     max-width: 600px;
     font-size: 1.5em;
@@ -18,6 +21,9 @@ const StyledAbout = styled.div`
   }
   img {
     width: 300px;
+    @media (max-width: 768px) {
+      display: 100%;
+    }
   }
 `
 

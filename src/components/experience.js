@@ -6,6 +6,9 @@ import Fade from 'react-reveal/Fade'
 const StyledExperience = styled.div`
   display: flex;
   flex-direction: row;
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
   padding-top: 20px;
   padding-bottom: 100px;
 `
