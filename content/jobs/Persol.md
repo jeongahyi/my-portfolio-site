@@ -24,10 +24,12 @@ dispatch:
 date: '2017-05-01'
 ---
 
-- Performed as a system engineer on backend team focusing on stabilization and automation of the web application; Java, SpringBoot, Shell Script, C++, Visual Basic, Oracle, Git, JIRA, Bitbucket
+- Worked closely with an agile team of 15 members on sprint based from designing the web to test after the release
 
-- Developed new features on weekly magazine include SQL function check, SQL function upgrade
+- Performed as a software engineer focusing on stabilization and automation of the web application
+
+- Produced new features on weekly magazine include SQL function check and SQL function upgrade
 
 - Developed cancellation function to automatize the task for the customer service team
 
-- With TDD(Test-driven development) worked on Sprint based from designing the web to test after the release
+- Java / SpringBoot / Shell Script / C++ / Visual Basic / Oracle SQL / Git / JIRA / Bitbucket

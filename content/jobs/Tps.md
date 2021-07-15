@@ -22,8 +22,10 @@ dispatch:
 date: '2016-03-01'
 ---
 
-- Developed a Java web application for SoftBank shop service system; Java, JavaScript, Apache Struts1(framework), PostgreSQL
+- Developed a web application from front to backend for SoftBank shop service system
 
-- Performed in function designs, documentation, unit test and QA Test
+- Performed in function designs, documentation, developing and unit testing
 
-- Implemented payment templates for LOHACO eCommerce website; HTML5, Sass, JavaScript
+- Produced multiple visual elements of LOHACO eCommerce website by translating UI/UX design wireframes into code, producing high quality markup
+
+- Java / JavaScript / HTML5 / SASS / PostgreSQL

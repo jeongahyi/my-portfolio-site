@@ -25,10 +25,10 @@ task:
 date: '2018-11-01'
 ---
 
-- Performed tasks with following; TypeScript, HTML5, css, AngularJS,Angular5, ES6+, d3.js, Git, Jenkins
+- Developed components for the customer facing web application while maintaining a healthy codebase, mainly built wireless management and monitoring pages for routers and switches for visualizing network systems such as a network map and heat maps
 
-- Continuously deliver new features involved with a network map and heat maps for visualizing network systems with D3.js and real time network data
+- Enhanced user experience by creating new UIs, cross-browser, and responsive webpages
 
-- Cooperate with cross-functional teams such as the marketing team, the QA team and back-end API team
+- Collaborated with cross-functional teams to implement new feature developments and create requirements, wireframes and user stories
 
-- Develop new features and maintain the existing code while dealing with network equipments such as routers, switches and APs and using network CLI and network API
+- AngularJS / Angular5 / ES6+ / TypeScript / D3.js / REST APIs / HTML5 / CSS / Git / Jira / Jenkins / Gerrit / Adobe XD

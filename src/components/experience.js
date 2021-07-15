@@ -19,6 +19,9 @@ const StyledTabs = styled.div`
 
 const StyledTabButton = styled.button`
   width: 400px;
+  @media (max-width: 768px) {
+    width: 100%;
+  }
   padding: 15px 10px;
   border: none;
   text-align: left;
@@ -46,14 +49,10 @@ const StyledTabButton = styled.button`
   }
 `
 
-const StyledTabPanels = styled.div`
-
-`
-
 const StyledTabPanel = styled.div`
   padding: 20px;
   top: 0;
-  color: ${props => props.theme.lightGrayColor};
+  color: ${props => props.theme.orangeColor};
   ul {
     list-style: none;
     padding: 0;
@@ -110,7 +109,7 @@ const Experience = () => {
           ))}
         </Fade>
       </StyledTabs>
-      <StyledTabPanels>
+      <div>
         <Fade
           bottom
           duration={1000}
@@ -143,7 +142,7 @@ const Experience = () => {
             </StyledTabPanel>
           ))}
         </Fade>
-      </StyledTabPanels>
+      </div>
     </StyledExperience>
   )
 }
