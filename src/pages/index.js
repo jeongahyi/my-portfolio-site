@@ -67,7 +67,7 @@ const IndexPage = () => {
         <Fade left duration={1000} delay={450} distance="30px">
           <p className="sentence">
             <Link to="/projects" className="link">
-              View a list of my projects
+              View Featured Projects
             </Link>
           </p>
         </Fade>
